@@ -13,10 +13,16 @@
 
 ## Instructions
 
-- Clone the repository
+- Clone repository
 
 ```bash
 git clone https://github.com/teanirudh/snap-stock.git
+```
+
+- Change directory
+
+```bash
+cd snap-stock
 ```
 
 - Install Flask

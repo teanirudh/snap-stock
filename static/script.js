@@ -38,6 +38,7 @@ d0.onanimationiteration = () => {
 function uploadImage() {
   clearDigits();
   var imageInput = document.getElementById("img-ip");
+  imageInput.value = null;
   imageInput.click();
   sb.classList.add("disabled-button");
 }
