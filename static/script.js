@@ -35,6 +35,54 @@ d0.onanimationiteration = () => {
   d0.style.animation = "none";
 };
 
+function uploadImage() {
+  clearDigits();
+  var imageInput = document.getElementById("img-ip");
+  imageInput.click();
+  sb.classList.add("disabled-button");
+}
+
+function setImage() {
+  var imageInput = document.getElementById("img-ip");
+  var imageBox = document.getElementById("img-bx");
+  var image = imageInput.files[0];
+  if (!image) return;
+
+  var reader = new FileReader();
+  reader.onload = () => (imageBox.src = reader.result);
+  reader.readAsDataURL(image);
+  sb.classList.remove("disabled-button");
+}
+
+function submitImage() {
+  var imageInput = document.getElementById("img-ip");
+  var image = imageInput.files[0];
+  if (!image) return;
+
+  const formData = new FormData();
+  formData.append("image", image);
+  startProcess();
+
+  setTimeout(stopProcess, 5000);
+}
+
+function startProcess() {
+  ub.classList.add("disabled-button");
+  sb.classList.add("disabled-button");
+
+  clearDigits();
+  startAnimation();
+  startCounter();
+}
+
+function stopProcess(str) {
+  stopCounter();
+  stopAnimation();
+  setDigits(str);
+
+  setTimeout(() => ub.classList.remove("disabled-button"), 3000);
+}
+
 function startAnimation() {
   runId2 = true;
   runId1 = true;

@@ -18,7 +18,7 @@
                     </div>
                     <div class="image-row">
                         <div class="button-row">
-                            <div id="ub" class="image-button upload-button" onclick="">
+                            <div id="ub" class="image-button upload-button" onclick="uploadImage()">
                                 <div class="image-button-text">Upload</div>
                                 <img class="image-button-icon" src="{{ url_for('static', filename='upload-icon.png') }}" alt="upload">
                                 <input
@@ -27,10 +27,10 @@
                                     type="file"
                                     accept="image/*"
                                     capture
-                                    onchange=""
+                                    onchange="setImage()"
                                 ></input>
                             </div>
-                            <div id="sb" class="image-button submit-button" onclick="">
+                            <div id="sb" class="image-button submit-button" onclick="submitImage()">
                                 <div class="image-button-text">Submit</div>
                                 <img class="image-button-icon" src="{{ url_for('static', filename='submit-icon.png') }}" alt="submit">
                             </div>
