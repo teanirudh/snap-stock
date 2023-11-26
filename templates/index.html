@@ -5,6 +5,31 @@
         <script async defer src="{{ url_for('static', filename='script.js') }}"></script>
     </head>
     <body>
-        Hello World!
-    </body>
+        <div class="main-wrapper">
+            <div class="left-column"></div>
+            <div class="right-column">
+                <div></div>
+                <div class="counter-wrapper">
+                    <div class="divider divider-dark" style="align-self: start"></div>
+                    <div>
+                        <div class="counter-header">Count</div>
+                        <div class="counter">
+                            <div class="digit">
+                                <div id="d2">-</div>
+                            </div>
+                            <div class="digit">
+                                <div id="d1">-</div>
+                            </div>
+                            <div class="digit">
+                                <div id="d0">-</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider divider-dark" style="align-self: end"></div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
