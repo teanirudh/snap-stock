@@ -63,7 +63,17 @@ function submitImage() {
   formData.append("image", image);
   startProcess();
 
-  setTimeout(stopProcess, 5000);
+  fetch("/process", {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => (res.ok ? res.json() : Promise.reject()))
+    .then((res) => {
+      stopProcess(res.count);
+    })
+    .catch(() => {
+      stopProcess("ERR");
+    });
 }
 
 function startProcess() {
