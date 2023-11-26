@@ -6,7 +6,45 @@
     </head>
     <body>
         <div class="main-wrapper">
-            <div class="left-column"></div>
+            <div class="left-column">
+                <div></div>
+                <div class="title-wrapper">
+                    <div class="title">Title</div>
+                </div>
+                <div class="image-wrapper">
+                    <div class="divider divider-light" style="align-self: start"></div>
+                    <div class="image-row">
+                        <img id="img-bx" class="image-box">
+                    </div>
+                    <div class="image-row">
+                        <div class="button-row">
+                            <div id="ub" class="image-button upload-button" onclick="">
+                                <div class="image-button-text">Upload</div>
+                                <img class="image-button-icon" src="{{ url_for('static', filename='upload-icon.png') }}" alt="upload">
+                                <input
+                                    id="img-ip"
+                                    class="image-input"
+                                    type="file"
+                                    accept="image/*"
+                                    capture
+                                    onchange=""
+                                ></input>
+                            </div>
+                            <div id="sb" class="image-button submit-button" onclick="">
+                                <div class="image-button-text">Submit</div>
+                                <img class="image-button-icon" src="{{ url_for('static', filename='submit-icon.png') }}" alt="submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prompt-wrapper">
+                    <div class="prompt">
+                        This is sample text. This is sample text. This is sample text.
+                        This is sample text. This is sample text. This is sample text.
+                    </div>
+                </div>
+                <div></div>
+            </div>
             <div class="right-column">
                 <div></div>
                 <div class="counter-wrapper">
